@@ -7,6 +7,7 @@ export async function parsePropertyQuery(query: string) {
 	const poolMatch = /pool/i.test(query);
 	const viewMatch = /view/i.test(query);
 	const hoaMatch = query.match(/(?:hoa|association fee).*?(?:under|max(?:imum)?|less than)?\s*\$?([\d,]+)/i);	
+	
 	const typeMap: Record<string,string> = {
 		condo: "Condominium", townhome: "Townhouse",
 		"single family": "SingleFamilyResidence", land: "UnimprovedLand"
