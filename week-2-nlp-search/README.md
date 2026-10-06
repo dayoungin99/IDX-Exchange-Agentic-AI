@@ -36,7 +36,6 @@ is converted into:
 - Property type
 - Pool
 - View
-- Maximum HOA
 
 ## 3. Implementation
 
