@@ -51,31 +51,28 @@ interfaces.
 ## Planned Architecture
 
 ```text
-                         User
-                           │
-                           ▼
-                 Communication Layer
-                  (WhatsApp / Email)
-                           │
-                           ▼
-                Multi-Agent Orchestrator
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-   Property Search    Market Analytics   Recommendation
-       Agent              Agent             Agent
-          │                │                │
-          └──────────┐     │     ┌──────────┘
-                     │     │     │
-                     ▼     ▼     ▼
-                    Data Layer
-               Active + Historical
-                   MLS Records
-
-                     ▲
-                     │
-                  RAG Agent
-                     │
-                     ▼
-               Knowledge Sources
+                           User
+                             │
+                             ▼
+                    Communication Layer
+                     (WhatsApp / Email)
+                             │
+                             ▼
+                  Multi-Agent Orchestrator
+                             │
+        ┌─────────┬──────────┼─────────┬─────────┐
+        │         │          │         │         │
+        ▼         ▼          ▼         ▼         ▼
+    Property    Market    Recomm.     RAG      Email
+     Search    Analytics   Agent     Agent     Agent
+      Agent     Agent                  │
+        │         │          │         ▼
+        │         │          │  Knowledge Sources
+        │         │          │
+        └─────────┴──────────┘
+                  │
+                  ▼
+             Data Layer
+        Active + Historical
+             MLS Records
+```
